@@ -10,25 +10,28 @@ function getComputer(arr) {
 };
 
 function game(x, y) {
-    if (x == y){
+    if( x === null || x === "" || x === undefined){
+        return `Input invalid, please select from from the choices provided: ${choice[0]}, ${choice[1]}, or ${choice[2]}`;
+    }
+    if (x.toLowerCase() === y){
         return `You selected ${x} and the computer selected ${y}, so you tied!`
     }
-    if (x == 'rock' && y == 'paper'){
+    if (x.toLowerCase() === 'rock' && y === 'paper'){
         return `You selected ${x}, and the computer selected ${y}, you lost!`
     };
-    if (x == 'rock' && y == 'scissors'){
+    if (x.toLowerCase() === 'rock' && y === 'scissors'){
         return `You selected ${x}, and the computer selected ${y}, you win!`
     };
-    if (x == 'paper' && y == 'scissors'){
+    if (x.toLowerCase() === 'paper' && y === 'scissors'){
         return `You selected ${x}, and the computer selected ${y}, you lost!`
     };
-    if (x == 'paper' && y == 'rock'){
+    if (x.toLowerCase() === 'paper' && y === 'rock'){
         return `You selected ${x}, and the computer selected ${y}, you win!`
     };
-    if (x == 'scissors' && y == 'rock'){
+    if (x.toLowerCase() === 'scissors' && y === 'rock'){
         return `You selected ${x}, and the computer selected ${y}, you lost!`
     };
-    if (x == 'scissors' && y == 'paper'){
+    if (x.toLowerCase() === 'scissors' && y === 'paper'){
         return `You selected ${x}, and the computer selected ${y}, you win!`
     };
 
